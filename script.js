@@ -36,8 +36,8 @@ async function checkWinner(){
     let winner = '';
 
     if((
-        (square11 == square21 && square11 == square31) 
-            || (square11 == square12 && square11 == square13) 
+        (square11 == square21 && square11 == square31)
+            || (square11 == square12 && square11 == square13)
             || (square11 == square22 && square11 == square33)
         ) && square11 !=''){
              winner = square11
@@ -55,10 +55,10 @@ async function checkWinner(){
         ) && square33 !=''){
             winner = square33;
     }
-    
+
     if(winner != ''){
         gameOver = true;
-        
+
         await sleep(50);
         alert('O ganhador foi o: "' + winner + '"')
     }
@@ -70,6 +70,9 @@ function sleep(ms){
 }
 
 function restart(){
+    gtag('event', 'link_click', {
+        'link_text': 'Novo jogo'
+    })
     location.reload()
 }
 
