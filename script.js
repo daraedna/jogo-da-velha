@@ -4,10 +4,14 @@ const player2 = 'O';
 let playTime = player1;
 let gameOver = false;
 
-window.dataLayer.push({
-    'event': 'userInfo',
+const userInfo = {
     'userType': 'ADM',
     'userName': 'WHISKY',
+}
+
+window.dataLayer.push({
+    'event': 'userInfo',
+    userInfo
 });
 
 updateInfo();
