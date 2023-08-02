@@ -4,6 +4,12 @@ const player2 = 'O';
 let playTime = player1;
 let gameOver = false;
 
+window.dataLayer.push({
+    'event': 'userInfo',
+    'userType': 'ADM',
+    'userName': 'WHISKY',
+});
+
 updateInfo();
 move();
 
@@ -70,11 +76,6 @@ function sleep(ms){
 }
 
 function restart(){
-    gtag('user_properties', {   favorite_composer: 'Mahler',   favorite_instrument: 'contrabaixo',   season_ticketholder: 'true' });
-    dataLayer.push({
-        'userType': 'ADM',
-        'userName': 'WHISKY',
-    })
     location.reload()
 }
 
