@@ -70,8 +70,8 @@ function sleep(ms){
 }
 
 function restart(){
-    gtag('event', 'link_click', {
-        'link_text': 'Novo jogo'
+    gtag('set', {
+        'user_type': 'Adm'
     })
     location.reload()
 }
