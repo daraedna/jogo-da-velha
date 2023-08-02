@@ -70,9 +70,7 @@ function sleep(ms){
 }
 
 function restart(){
-    gtag('set', {
-        'user_type': 'Adm'
-    })
+    gtag('set', 'user_properties', {   favorite_composer: 'Mahler',   favorite_instrument: 'contrabaixo',   season_ticketholder: 'true' });
     location.reload()
 }
 
